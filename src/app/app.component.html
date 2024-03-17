@@ -1,0 +1,51 @@
+<div class="container flex justify-content-center align-items-center w-screen h-screen  bg-blue-500">
+  <div class="grid w-screen h-screen m-0">
+    <div class="lg:col-4 md:col-12 text-center bg-blue-500">
+      <div class="title">
+        <h3 class=" lg:text-6xl md:text-4xl text-1xl poppins-bold">Challenge Create a Video With Video JS Nur
+          Paujiana
+        </h3>
+      </div>
+
+      <div class="thanks-content flex justify-content-center ">
+        <span class=" text-blue-500 font-bold w-8rem bg-white">
+          THANK YOU
+        </span>
+      </div>
+
+      <div class="profil-image mt-3">
+        <img src="../assets/img/my-image.jpeg" alt="" width="150" height="150" class="border-circle">
+      </div>
+    </div>
+    <div class="lg:col-8 md:col-12 bg-blue-900 flex align-items-center justify-content-center">
+      <div class="card text-center">
+        <br>
+        <div class="grid wrapper-content surface-300 shadow-5 border-round">
+          <div class="col-12 flex justify-content-center align-items-center">
+            <video #videoPlayer class="video-js" width="530" height="200">
+              <source src="../assets/video/oceans.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="col-3 flex align-items-center">
+            <p-button type="button" (click)="toggleFullScreen()"><i class="pi pi-desktop"></i></p-button>
+          </div>
+          <div class="col-2 flex align-items-center">
+            <p-button type="button" (click)="previousButton()"><i class="pi pi-step-backward-alt"></i></p-button>
+          </div>
+          <div class="col-2 flex align-items-center">
+            <p-button (click)="playPauseVideo()"> <i class="{{ isPlaying ? 'pi pi-pause' : 'pi pi-caret-right'
+            }}"></i></p-button>
+          </div>
+          <div class="col-2 flex align-items-center">
+            <p-button type="button" (click)="forwardButton()"><i class="pi pi-step-forward-alt"></i></p-button>
+          </div>
+          <div class="col-3 flex align-items-center justify-content-end">
+            <p-button (click)=" restorePosition()"><i class="pi pi-replay"></i></p-button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
